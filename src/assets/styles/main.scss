@@ -72,7 +72,7 @@ header {
         outline: none;
         padding: 10px;
         border-radius: 5px;
-        border: 1px solid $grey;
+        border: 1px solid lighten($grey, 60);
 
         color: $grey;
         font-size: 14px;
@@ -135,6 +135,9 @@ header {
       grid-template-columns: repeat(3, 1fr);
 
       .card-container {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 20%);
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -185,6 +188,135 @@ header {
 
       .card-container.fourth {
         background-image: url('/assets/images/image-3.jpg');
+      }
+    }
+
+    .more-detail-container {
+      padding: 20px 0px;
+      border-bottom: 1px solid lighten($grey, 60);
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      h4 {
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+        font-family: $primary-font;
+      }
+
+      img {
+        width: 30px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .top-stories-container {
+    margin-top: 40px;
+
+    .header-container {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+        color: $grey;
+        font-family: $primary-font;
+      }
+
+      input {
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid lighten($grey, 60);
+
+        color: $grey;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: $primary-font;
+      }
+    }
+
+    .content-container {
+      width: 100%;
+      margin-top: 20px;
+
+      display: flex;
+
+      .left-side-container {
+        flex: 1;
+
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .box-container {
+          width: 100%;
+
+          .image-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .category-name {
+            margin-top: 20px;
+
+            color: $color7;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: $primary-font;
+          }
+
+          .title {
+            margin-top: 10px;
+
+            color: #333;
+            font-size: 14px;
+            font-family: $primary-font;
+          }
+
+          .subtitle {
+            margin-top: 10px;
+            line-height: 22px;
+
+            color: grey;
+            font-size: 12px;
+            font-family: $primary-font;
+          }
+        }
+      }
+
+      .right-side-container {
+        width: 40%;
+        padding-left: 40px;
+
+        .box-container {
+          width: 100%;
+
+          .image-container {
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 12px;
+            }
+          }
+        }
       }
     }
   }
